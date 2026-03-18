@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Invitation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      position: relative;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you go to date with me?</h1>
+  <p>You would make my date unforgettable 💖</p>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="sayYes()">Yes</button>
+    <button id="noBtn" onmouseover="moveButton()">No</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.body.innerHTML = "<h1>Yay! I can't wait for prom with you! 🎉</h1>";
+    }
+
+    function moveButton() {
+      var button = document.getElementById("noBtn");
+      var x = Math.random() * 300;
+      var y = Math.random() * 300;
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
